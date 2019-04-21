@@ -1,5 +1,6 @@
 # Universal Studios
-<img src="images/universal_logo.png" alt="Universal Studios" width="500"/>
+<img src="images/universal_logo.png" alt="Universal Studios" width="300"/>
+
 A poorly named Discord bot for [Tooniversal Studios](https://tooniversal.com) updates.
 
 # What does it do?
