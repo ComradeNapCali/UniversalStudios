@@ -1,0 +1,5 @@
+*.pyc
+*.code-workspace
+__pycache__/
+
+DISCORD_TOKEN.txt
