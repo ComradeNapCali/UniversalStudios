@@ -3,7 +3,7 @@ import discord
 import os
 import asyncio
 
-CHANNEL = 569390684440625172
+CHANNEL = 569398270552702990
 client = discord.Client()
 changelog_bot = UpdateChangelogGetter.UpdateChangelogGetter()
 commit_bot = UpdateGithubGetter.UpdateGithubGetter()
