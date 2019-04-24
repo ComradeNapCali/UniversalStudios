@@ -19,6 +19,7 @@ class UpdateGithubGetter:
         if not self.known_commits:
             firstTime = True
         for commits in api_site:
+            print("Commit: {}".format(commits))
             commit_id = commits["id"]
             if not (commit_id in self.known_commits):
                 print("Commit {} detected!".format(commit_id))
@@ -32,4 +33,4 @@ class UpdateGithubGetter:
 
 if __name__ == "__main__":
     update_bot = UpdateGithubGetter()
-    update_bot.get_commits()
+    print(update_bot.get_commits())
