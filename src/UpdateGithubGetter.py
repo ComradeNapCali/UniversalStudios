@@ -21,8 +21,8 @@ class UpdateGithubGetter:
             firstTime = True
         for commits in api_site:
             if isinstance(commits, str):
-                print("Converting commit str into dict: {}".format(commits))
-                commits = json.loads(commits)
+                print("Commit {} is not JSON!".format(commits))
+                continue
             commit_id = commits["id"]
             if not (commit_id in self.known_commits):
                 print("Commit {} detected!".format(commit_id))
