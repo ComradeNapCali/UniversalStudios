@@ -1,4 +1,5 @@
 import requests
+import json
 
 class UpdateGithubGetter:
     def __init__(self):
@@ -19,7 +20,8 @@ class UpdateGithubGetter:
         if not self.known_commits:
             firstTime = True
         for commits in api_site:
-            print("Commit: {}".format(commits))
+            if isinstance(commits, str):
+                commits = json.loads(commits)
             commit_id = commits["id"]
             if not (commit_id in self.known_commits):
                 print("Commit {} detected!".format(commit_id))
