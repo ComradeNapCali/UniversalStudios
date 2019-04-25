@@ -36,6 +36,6 @@ async def on_ready():
     while True:
         await changelog_update_talk()
         await github_update_talk()
-        await asyncio.sleep(10)
+        await asyncio.sleep(60) # This is set at one minute because of GitHub's rate limiting.
 
 client.run(get_token())
