@@ -35,7 +35,6 @@ async def on_ready():
     print('We have logged in as {0.user}! Now logging updates...'.format(client))
     while True:
         await changelog_update_talk()
-        await github_update_talk()
         await asyncio.sleep(120) # Because of GitHub's rate limiting, we have to do this here.
 
 client.run(get_token())
