@@ -18,6 +18,8 @@ class UpdateChangelogGetter:
         updates = update_site_contents.find_all("a", "post-title-label")
         if not self.known_updates:
             firstTime = True
+        else:
+            firstTime = False
         for update in updates:
             update_title = update.text
             update_link = update.get('href')
